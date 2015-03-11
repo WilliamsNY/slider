@@ -30,7 +30,7 @@ jssor_slider1_starter = function (containerId) {
         $ArrowNavigatorOptions: {                  // Options to specify and enable arrow navigator or not
             $Class: $JssorArrowNavigator$,         // [Requried] Class to create arrow navigator instance
             $ChanceToShow: 1,                      // [Required] 0 Never, 1 Mouse Over, 2 Always
-            $AutoCenter: 2,                        // Auto center arrows in parent container, 0 No, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
+            $AutoCenter: 0,                        // Auto center arrows in parent container, 0 No, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
             $Steps: 1                              // Steps to go for each navigation request, default value is 1
         }
     };
