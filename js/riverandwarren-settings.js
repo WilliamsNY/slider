@@ -52,3 +52,7 @@ jssor_slider1_starter = function (containerId) {
     $(window).bind("orientationchange", ScaleSlider);
     // responsive code end
 };
+
+$( document ).ready(function() {
+    jssor_slider1_starter('slider1_container');
+});
