@@ -29,7 +29,7 @@
   "license": "MIT",
   "main": [
     "js/jssor.js",
-    "js/jssor.slider.min.js",
+    "js/jssor.slider.min.js"
   ],
   "ignore": [
     "demos-jquery",
