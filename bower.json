@@ -28,7 +28,9 @@
   "homepage": "http://jssor.com",
   "license": "MIT",
   "main": [
-    "js/jssor.slider.mini.js"
+    "js/jssor.js",
+    "js/jssor.slider.min.js",
+    "js/riverandwarren-settings.js"
   ],
   "ignore": [
     "demos-jquery",
