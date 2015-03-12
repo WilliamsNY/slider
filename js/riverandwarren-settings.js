@@ -29,7 +29,7 @@ jssor_slider1_starter = function (containerId) {
 
         $ArrowNavigatorOptions: {                  // Options to specify and enable arrow navigator or not
             $Class: $JssorArrowNavigator$,         // [Requried] Class to create arrow navigator instance
-            $ChanceToShow: 1,                      // [Required] 0 Never, 1 Mouse Over, 2 Always
+            $ChanceToShow: 0,                      // [Required] 0 Never, 1 Mouse Over, 2 Always
             $AutoCenter: 0,                        // Auto center arrows in parent container, 0 No, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
             $Steps: 1                              // Steps to go for each navigation request, default value is 1
         }
@@ -41,7 +41,7 @@ jssor_slider1_starter = function (containerId) {
     function ScaleSlider() {
         var bodyWidth = document.body.clientWidth;
         if (bodyWidth)
-            jssor_slider1.$ScaleWidth(Math.min(bodyWidth, 1920));
+            jssor_slider1.$ScaleWidth(Math.min(Math.max(bodyWidth, 1075), 1920));
         else
             window.setTimeout(ScaleSlider, 30);
     }
