@@ -40,10 +40,23 @@ jssor_slider1_starter = function (containerId) {
     // responsive code begin (scale as the window is resized)
     function ScaleSlider() {
         var bodyWidth = document.body.clientWidth;
-        if (bodyWidth)
-            jssor_slider1.$ScaleWidth(Math.min(Math.max(bodyWidth, 1075), 1920));
-        else
+        var bodyHeight = document.body.clientHeight;
+        var slideWidth = $("#jssor_slider1").width();
+        var slideHeight = $("#jssor_slider1").height();
+
+        if ((bodyWidth) && (bodyHeight)) {
+            if (bodyWidth > slideWidth) {
+                if (bodyHeight > ((bodyWidth / slideWidth) * slideHeight)) {
+                    jssor_slider1.$ScaleHeight(bodyHeight);
+                } else {
+                    jssor_slider1.$ScaleWidth(bodyWidth);
+                }
+            } else if (bodyHeight > slideHeight) {
+                jssor_slider1.$ScaleHeight(bodyHeight);
+            }
+        } else {
             window.setTimeout(ScaleSlider, 30);
+        }
     }
     ScaleSlider();
 
