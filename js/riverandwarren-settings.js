@@ -41,18 +41,14 @@ jssor_slider1_starter = function (containerId) {
     function ScaleSlider() {
         var bodyWidth = document.body.clientWidth;
         var bodyHeight = document.body.clientHeight;
-        var slideWidth = $("#jssor_slider1").width();
-        var slideHeight = $("#jssor_slider1").height();
+        var slideWidth = $("#slider1_container").width();
+        var slideHeight = $("#slider1_container").height();
 
         if ((bodyWidth) && (bodyHeight)) {
-            if (bodyWidth > slideWidth) {
-                if (bodyHeight > ((bodyWidth / slideWidth) * slideHeight)) {
-                    jssor_slider1.$ScaleHeight(bodyHeight);
-                } else {
-                    jssor_slider1.$ScaleWidth(bodyWidth);
-                }
-            } else if (bodyHeight > slideHeight) {
+            if (bodyHeight > ((bodyWidth / slideWidth) * slideHeight)) {
                 jssor_slider1.$ScaleHeight(bodyHeight);
+            } else if (((bodyWidth / slideWidth)) != 1) {
+                jssor_slider1.$ScaleWidth(bodyWidth);
             }
         } else {
             window.setTimeout(ScaleSlider, 30);
