@@ -45,10 +45,10 @@ jssor_slider1_starter = function (containerId) {
         var slideHeight = $("#slider1_container").height();
 
         if ((bodyWidth) && (bodyHeight)) {
-            if (bodyHeight > ((bodyWidth / slideWidth) * slideHeight)) {
-                jssor_slider1.$ScaleHeight(bodyHeight);
-            } else if (((bodyWidth / slideWidth)) != 1) {
+            if (bodyWidth > ((bodyHeight / slideHeight) * slideWidth)) {
                 jssor_slider1.$ScaleWidth(bodyWidth);
+            } else if (((bodyHeight / slideHeight)) != 1) {
+                jssor_slider1.$ScaleHeight(bodyHeight);
             }
         } else {
             window.setTimeout(ScaleSlider, 30);
